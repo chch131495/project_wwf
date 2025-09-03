@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid | css</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+</head>
+    <style>
+        .grid {
+            border:2px solid #000;
+            display:grid;/* 2차원으로 적용 */
+            grid-template-columns:100px repeat(2,50px)/*  열의 방향의 값을 첫번째값->100 두번째값->200
+            grid-template-rows:50px repeat(2, 100px);/* 행의 방향 */ }
+        .grid li {background:aqua;}
+        .grid li:nth-child(odd) {background:pink;}
+        #root {
+            background:beige;
+            display:grid;
+            grid-template-areas:
+                'header header'
+                /* .->빈공간을 의미(갯수만 맞추면 오류나지않음) */
+                'aside main'
+                'footer footer';
+            grid-template-rows:100px 300px 100px;
+            grid-template-columns:250px 1000px;;
+            width:1250px;
+            gap:10px 30px; /* 순서가 행과 열로 적용 */
+            margin:0 auto;
+        }
+        #root * {border:1px solid red;}
+        /* grid-area란? 부모에서 자식들을 명치으로 관리하기 위해 자식에게 부여하는 의미있는 이름 */
+        #root header {grid-area:header;}
+        #root aside {grid-area:aside;}
+        #root main {grid-area:main;}
+        #root footer {grid-area:footer;}
+    </style>
+<body>
+    <div id="root">
+        <header>header</header>
+        <aside>aside</aside>
+        <main>main</main>
+        <footer>footer</footer>
+    </div>
+    <ul class="grid">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+    </ul>
+</body>
+</html>

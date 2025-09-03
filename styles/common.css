@@ -1,0 +1,65 @@
+/* 공통변수 */
+:root {
+    /* 색상 */
+    --color-white:#fff;
+    --color-black:#000;
+    --color-gray:#aaa;
+    --color-gray-f5:#f5f5f5;
+    --color-point-or1:#FE9300;
+    --color-point-or2:#fe9305;
+    --color-gray-e3:##E3E4E0;
+    /* 글꼴(desktop) */
+    --main-title70-d:4.735rem;
+    --main-subtitle55-d:3.438rem;
+    --main-picture40-d:2.5rem;
+    --main-sponsor34-d:2.125rem;
+    --main-question26-d:1.625rem;
+    --main-content20-d:1.25rem;
+    /* 글꼴(tablet) */
+    --main-title50-t:3.125rem;
+    --main-subtitle40-t:2.5rem;
+    --main-content16-t:1.0rem;
+    --main-sponsor22-t-m:1.375rem;
+    --main-question20-t-m:1.25rem;
+    /* 글꼴(mobile) */
+    --main-title30-m:1.875rem;
+    --main-subtitle25-m:1.563rem;
+    --main-content14-m:0.875rem;
+    /* 행간, 자간 */
+    --line-150:1.5;
+    --line-130:1.3;
+    --letter-minus2:-0.02rem;
+    --weight-medium:500;
+    --weight-semi-bold:600;
+    --weight-bold:700;
+}
+/* 공통 common.css */
+#wrap .bg {/* background은 요소이기때문에 크기를 가지지않음. */
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;/* 이미지를 따라 다를수 있지만 기본적으로 센터 */
+}
+#wrap .bg .container {/* 자식이 커지면 부모는 따라옴 */
+    max-width:1250px; min-width:320px;
+    margin:0 auto; height:100vh; overflow:hidden;
+    background:rgba(255,255,0,0.5); /* 테스트용 */
+    padding:200px 0 0;
+}
+#wrap .bg .container .sponsor_btn {
+    background:linear-gradient(90deg, var(--color-point-or1), var(--color-point-or2));
+    width:380px; height:74px;
+    border-radius:50px;
+    font-size:var(--main-sponsor34-d); color:var(--color-white);
+    display:flex; flex-flow:row nowrap; justify-content:center; align-items:center;
+}
+#wrap .bg .container .sponsor_btn img {}
+#wrap .bg .container h2 {
+    text-align:center;
+    font-size:var(--main-subtitle55-d); font-weight:var(--weight-bold);
+    line-height:var(--line-130);
+    letter-spacing:var(--letter-minus2);
+}
+#wrap .bg .container h2+p {
+    font-size:var(--main-content20-d);
+    line-height:var(--line-150);
+}
