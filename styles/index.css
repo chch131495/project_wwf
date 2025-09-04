@@ -72,20 +72,24 @@
     background:linear-gradient(90deg, var(--color-point-or1), var(--color-point-or2));
     display:flex; flex-flow:row nowrap; justify-content:center; align-items:center;
     font-size:var(--main-question26-d); padding:30px 0;
-    height:85px;
 }
 #wrap .row2 #quiz .quiz_current .status dt img {}
 #wrap .row2 #quiz .quiz_current .status dd {
-    background:var(--color-white); height:196px;
+    background:var(--color-white); height:calc(100% - 92px); /* 부모의 크기를 제외한 나머지->calc는 단위가 달라도 계산되는 태그 */
     color:var(--color-black); font-size:var(--main-question26-d);
-    display:flex; justify-content:center; align-items:flex-end;
-    padding-bottom:73px;
+    display:flex; justify-content:center; 
+    position:relative;
+    padding-top:48px;
 }
 #wrap .row2 #quiz .quiz_current .status dd em {
     font-size:var(--main-title70-d); font-weight:var(--weight-bold);
-    color:var(--color-point-or1);
+    color:var(--color-point-or1); 
 }
-#wrap .row2 #quiz .quiz_current .status dd span{color:var(--color-point-or1); font-weight:var(--weight-bold);}
+#wrap .row2 #quiz .quiz_current .status dd span{
+    color:var(--color-point-or1); font-weight:var(--weight-bold);
+    position:relative; top:40px;
+}
+#wrap .row2 #quiz .quiz_current .status dd strong {position:relative; top:40px;}
 #wrap .row2 #quiz .quiz_current p {float:right; margin:20px 0 0;}
 /* ------------------------------------------3행 동영상 */
 #wrap .row3 {background-image:url(../images/video_bg.jpg);}
@@ -95,10 +99,10 @@
 }
 #wrap .row3 #story h2 {margin-bottom:30px;}
 #wrap .row3 #story iframe{width:909px; height:525px; margin-bottom:30px;}
-#wrap .row3 #story .sponsor_btn {}
+#wrap .row3 #story .sponsor_btn {margin-bottom:131px;}
 /* ------------------------------------------4행 빙하면적감소 */
 #wrap .row4 {background-image:url(../images/50_bg.jpg);}
-#wrap .row4 #wwf_msg1 {color:var(--color-white); padding:80px 30px 0;}
+#wrap .row4 #wwf_msg1 {color:var(--color-white);}
 #wrap .row4 #wwf_msg1 h2 {text-align:left; margin-bottom:30px;}
 #wrap .row4 #wwf_msg1 h2 em {
     margin:30px 0; position:relative; z-index:;
@@ -113,43 +117,75 @@
     color:var(--color-black); font-weight:var(--weight-bold);
     z-index:11; position:relative;
 }
-#wrap .row4 #wwf_msg1 h2+p {font-size:var(--main-content20-d);}
+#wrap .row4 #wwf_msg1 h2+p {
+    font-size:var(--main-content20-d); text-align:left;
+}
 #wrap .row4 #wwf_msg1 p {margin-bottom:30px;}
 #wrap .row4 #wwf_msg1 p img {}
 /* ------------------------------------------5행빙하가녹으면 */
 #wrap .row5 {background-color:var(--color-gray-f5);}
-#wrap .row5 #wwf_msg2 {}
-#wrap .row5 #wwf_msg2 h2 {margin-bottom:10px;}
-#wrap .row5 #wwf_msg2 h2+p {text-align:center; }
+#wrap .row5 #wwf_msg2 {padding-top:80px;}
+#wrap .row5 #wwf_msg2 h2 {margin:50px 0;}
+#wrap .row5 #wwf_msg2 h2+p {
+    text-align:center; margin:40px 0;
+    /* 한 줄 말줄임 처리(br제거) */
+    /* width:300px;
+    white-space:nowrap;/* 한줄 처리 */
+    /* overflow:hidden;
+    text-overflow:ellipsis; */
+    /* 설정한 width 기준 영역을 나간 글자를 말줄임처리하기 */
+}
+/* #wrap .row5 #wwf_msg2 h2+p br {display:none;} */
 #wrap .row5 #wwf_msg2 .msg_card_wrap {
     display:grid;
     grid-template-columns:repeat(3, 1fr); gap:10px;
-    padding:20px 0;
 }
-#wrap .row5 #wwf_msg2 .msg_card_wrap li {}
+/* 자식의 크기만 주고, 부모의 크기를 주지않으면 적용되지않음, 부모에다가도 배경색을 줘야한다. */
+#wrap .row5 #wwf_msg2 .msg_card_wrap li {padding-bottom:30px; background:var(--color-white);}
 #wrap .row5 #wwf_msg2 .msg_card_wrap li:nth-child(1) dl {
     background-image:url(../images/card_001.jpg); background-repeat:no-repeat;
-    height:380px; text-align:center; padding:30px 0;
+    height:380px; text-align:center; padding:30px 0; background-size:cover;
     color:var(--color-white); font-weight:var(--weight-bold);
 }
 #wrap .row5 #wwf_msg2 .msg_card_wrap li:nth-child(2) dl {
     background-image:url(../images/card_002.jpg); background-repeat:no-repeat;
-    height:380px; text-align:center; padding:30px 0;
+    height:380px; text-align:center; padding:30px 0; background-size:cover;
     color:var(--color-white); font-weight:var(--weight-bold);
 }
 #wrap .row5 #wwf_msg2 .msg_card_wrap li:nth-child(3) dl {
     background-image:url(../images/card_003.jpg); background-repeat:no-repeat;
-    height:380px; text-align:center; padding:30px 0;
+    height:380px; text-align:center; padding:30px 0; background-size:cover;
     color:var(--color-white); font-weight:var(--weight-bold);
 }
 #wrap .row5 #wwf_msg2 .msg_card_wrap li dl::after {
-    background:linear-gradient(--color-black); content:''; display:block;
-    position:absolute; left:0; right:0; width:100%; height:100%;
+    content:''; display:block; background:linear-gradient(var(--color-black), transparent);
+    top:0; bottom:0;
+    position:absolute; /* 겹치는 요소 */
+    width:100%; height:100%; z-index:9;
 }
-#wrap .row5 #wwf_msg2 .msg_card_wrap li dl {font-size:var(--main-picture40-d); position:relative;}
-#wrap .row5 #wwf_msg2 .msg_card_wrap li dl dt {}
-#wrap .row5 #wwf_msg2 .msg_card_wrap li dl dd {font-size:var(--main-question26-d); padding-top:20px;}
+#wrap .row5 #wwf_msg2 .msg_card_wrap li dl {
+    font-size:var(--main-picture40-d); position:relative; text-align:center;
+    height:320px; padding-top:30px;
+}
+#wrap .row5 #wwf_msg2 .msg_card_wrap li dl dt {
+    position:relative; z-index:10;
+    color:var(--color-white); position:relative; z-index:10;
+    font-size:var(--main-picture40-d);
+}
+#wrap .row5 #wwf_msg2 .msg_card_wrap li dl dd {
+    font-size:var(--main-question26-d); padding-top:30px;
+    z-index:10; position:relative;
+}
 #wrap .row5 #wwf_msg2 .msg_card_wrap li p {
-    height:191px; padding:20px;
-    font-size:var(--main-content20-d); line-height:var(--line-150); letter-spacing:var(--letter-minus2);
+    background:var(--color-white); 
+    font-size:var(--main-content20-d); 
+    line-height:var(--line-150); letter-spacing:var(--letter-minus2);
+    padding:20px 20px 0;
+    max-height:150px;
+    /* 말줄임(...)처리 */
+    overflow:hidden;/* 박스를 넘어가면 안보이게 하는 설정 */
+    display:-webkit-box; /* 브라우저엔진 -webkit- */
+    -webkit-line-clamp:2;/* 몇줄 초과시 말줄임처리 */
+    -webkit-box-orient:vertical;/* 글 방향 */
+    text-overflow:ellipsis;/* 말줄임 속성 */
 }

@@ -1,0 +1,80 @@
+/* ----------------------태블릿 */
+@media screen and (max-width:1250px){
+    /* -------------------------------------------------------t1250---------------------1행 */
+    /* 공통부분 */
+    #wrap .bg .container {padding:194px 80px 0;}/* 전체 너비가 가변형, 좌우 여백 80px *//* (common.css에서 너비를 적용한 부분을 찾아서 바꿔주기) */
+    #wrap .bg .container h2 {font-size:var(--main-subtitle40-t);}
+    #wrap .row1 #visual .title {font-size:var(--main-title50-t);} /* 1250공통부분 end */
+    #wrap .bg .container .sponsor_btn {width:308px; height:66px; font-size:var(--main-sponsor22-t-m);}
+    #wrap .row1 #visual .sponsor_question_btn {font-size:var(--main-sponsor22-t-m);}
+    /* -------------------------------------------------------t1250---------------------2행 */
+    #wrap .row2 #quiz .quiz_list p {font-size:var(--main-content16-t);}
+    #wrap .row2 #quiz .quiz_list #quiz_frm .list li label {font-size:var(--main-content16-t);}
+    #wrap .row2 #quiz .quiz_list #quiz_frm #quiz_answer_btn {font-size:var(--main-sponsor22-t-m);}
+    #wrap .row2 #quiz .quiz_current .status {width:350px; height:245px; border-radius:30px; overflow:hidden;}
+    #wrap .row2 #quiz .quiz_current .status dt {font-size:var(--main-sponsor22-t-m);}
+    #wrap .row2 #quiz .quiz_current .status dd {font-size:var(--main-content16-t);}
+    #wrap .row2 #quiz .quiz_current p {font-size:var(--main-content16-t);}
+    /* -------------------------------------------------------t1250---------------------3행 */
+    #wrap .row3 #story iframe {width:818px; height:473px; margin-top:50px;}
+    #wrap .row3 #story .sponsor_btn {margin-top:50px;}
+    /* -------------------------------------------------------t1250---------------------4행 */
+    #wrap .row4 #wwf_msg1 {height:972px;}
+    #wrap .row4 #wwf_msg1 h2+p {font-size:var(--main-content16-t);}
+    #wrap .row4 #wwf_msg1 p img {width:100%;}
+    /* -------------------------------------------------------t1250---------------------5행 */
+    #wrap .row5 #wwf_msg2 h2+p {font-size:var(--main-content16-t);}
+    #wrap .row5 #wwf_msg2 .msg_card_wrap li:nth-child(1) dl {height:270px;}
+    #wrap .row5 #wwf_msg2 .msg_card_wrap li:nth-child(2) dl {height:270px;}
+    #wrap .row5 #wwf_msg2 .msg_card_wrap li:nth-child(3) dl {height:270px;}
+    #wrap .row5 #wwf_msg2 .msg_card_wrap li dl dt {font-size:var(--main-question26-d); font-weight:var(--weight-semi-bold);}
+    #wrap .row5 #wwf_msg2 .msg_card_wrap li dl dd {font-size:var(--main-content16-t);}
+    #wrap .row5 #wwf_msg2 .msg_card_wrap li p {font-size:var(--main-content16-t);}
+}/* end 1250 */
+/* ----------------------모바일 */
+@media screen and (max-width:1020px) {
+    /* -----------------------------------m1020--------공통 */
+    #wrap .bg .container {padding:191px 15px 0;}
+    #wrap .bg .container h2 {font-size:var(--main-title30-m);}
+    #wrap .bg .container .sponsor_btn {width:300px; height:68px;}
+    /* -----------------------------------m1020--------1행 */
+    /* 이미지의 폭 변경 시 이미지태그는 100%, 필요한 경우 부모(블록)에만 px */
+    #wrap .row1 #visual .logo {width:42px;}
+    #wrap .row1 #visual .logo a img {width:100%;}
+    #wrap .row1 #visual .title {font-size:var(--main-title30-m); margin-bottom:25px;}
+    #wrap .bg .container .sponsor_btn {margin-top:10px;}
+    #wrap .row1 #visual .sponsor_question_btn {
+        float:none; margin:65px auto; width:330px; font-size:1.25rem;
+    }
+    /* -----------------------------------m1020--------2행 */
+    #wrap .row2 #quiz {display:block;}
+    #wrap .row2 #quiz .quiz_list h2 {width:100%;}
+    #wrap .row2 #quiz .quiz_list p {font-size:var(--main-content14-m);}
+    #wrap .row2 #quiz .quiz_list #quiz_frm .list li label {font-size:var(--main-content14-m);}
+    #wrap .row2 #quiz .quiz_list #quiz_frm #quiz_answer_btn {width:100%;}
+    #wrap .row2 #quiz .quiz_current .status {
+        width:384px; height:205px; float:none;
+        margin:68px auto 20px; 
+    }
+    #wrap .row2 #quiz .quiz_current .status dt {font-size:var(--main-sponsor22-t-m);}
+    #wrap .row2 #quiz .quiz_current .status dd {margin:0 auto 30px; }
+    #wrap .row2 #quiz .quiz_current .status dd em {font-size:var(--main-question26-d);}
+    #wrap .row2 #quiz .quiz_current .status dd span {position:relative; top:10px;}
+    #wrap .row2 #quiz .quiz_current .status dd strong {position:relative; top:10px;}
+    #wrap .row2 #quiz .quiz_current p {font-size:var(--main-content14-m); float:none; text-align:center;}
+    /* -----------------------------------m1020--------3행 */
+    #wrap .row3 #story iframe {width:368px; height:434px;}
+    /* -----------------------------------m1020--------4행 */
+    #wrap .row4 #wwf_msg1 h2+p {font-size:var(--main-content14-m);}
+    /* -----------------------------------m1020--------5행 */
+    #wrap .row5 #wwf_msg2 h2+p {font-size:var(--main-content14-m);}
+    #wrap .row5 #wwf_msg2 {height:max-content;}
+    #wrap .row5 #wwf_msg2 .msg_card_wrap {display:block; margin-bottom:20px;}
+    #wrap .row5 #wwf_msg2 .msg_card_wrap li {margin-bottom:20px;}
+    #wrap .row5 #wwf_msg2 .msg_card_wrap li:nth-child(1) dl {height:245px; background-position:center;}
+    #wrap .row5 #wwf_msg2 .msg_card_wrap li:nth-child(2) dl {height:245px; background-position:center;}
+    #wrap .row5 #wwf_msg2 .msg_card_wrap li:nth-child(3) dl {height:245px; background-position:center;}
+    #wrap .row5 #wwf_msg2 .msg_card_wrap li dl dt {margin-bottom:20px;}
+    #wrap .row5 #wwf_msg2 .msg_card_wrap li dl dd {height:122px;}
+    #wrap .row5 #wwf_msg2 .msg_card_wrap li p {font-size:var(--main-content14-m);}
+}
