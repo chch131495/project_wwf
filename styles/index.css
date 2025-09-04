@@ -35,7 +35,7 @@
     color:var(--color-white);
     padding-top:140px;
 }
-#wrap .row2 #quiz > * {border:1px solid red;}
+#wrap .row2 #quiz > * {}
 #wrap .row2 #quiz .quiz_list {}
 #wrap .row2 #quiz .quiz_list h2 {margin-bottom:30px; width:374px;}
 #wrap .row2 #quiz .quiz_list p {margin-bottom:30px; font-size:var(--main-content20-d);}
@@ -105,7 +105,7 @@
 #wrap .row4 #wwf_msg1 {color:var(--color-white);}
 #wrap .row4 #wwf_msg1 h2 {text-align:left; margin-bottom:30px;}
 #wrap .row4 #wwf_msg1 h2 em {
-    margin:30px 0; position:relative; z-index:;
+    /* margin:30px 0; */ position:relative; z-index:;
     color:var(--color-black); font-weight:var(--weight-bold);
 }
 #wrap .row4 #wwf_msg1 h2 em::after {/* 가상선택자를 이용해서 디테일하게 디자인*/

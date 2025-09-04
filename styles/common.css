@@ -42,7 +42,6 @@
 #wrap .bg .container {/* 자식이 커지면 부모는 따라옴 */
     max-width:1250px; min-width:320px;
     margin:0 auto; height:100vh; overflow:hidden;
-    background:rgba(255,255,0,0.5); /* 테스트용 */
     padding:200px 0 0;
 }
 #wrap .bg .container .sponsor_btn {
